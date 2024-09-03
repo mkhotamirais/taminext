@@ -1,3 +1,5 @@
+"use client";
+
 import Modal from "@/components/modal";
 import { Product } from "@prisma/client";
 import React, { useState } from "react";

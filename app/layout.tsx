@@ -4,7 +4,6 @@ import "./globals.css";
 import { Header } from "@/components/home/header";
 import { Footer } from "@/components/home/footer";
 import { HomeClient } from "@/components/wrapper";
-import { ClientProvider } from "@/providers/toaster-provider";
 import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,12 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <ClientProvider>
-          <Header />
-          <HomeClient>{children}</HomeClient>
-          <Footer />
-          <Toaster richColors position="top-center" closeButton />
-        </ClientProvider>
+        <Header />
+        <HomeClient>{children}</HomeClient>
+        <Footer />
+        <Toaster richColors position="top-center" closeButton />
       </body>
     </html>
   );
