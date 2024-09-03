@@ -38,10 +38,8 @@ export default function CreateProductPage() {
         toast.success(res.data.message);
         router.push(`/v1`);
         router.refresh();
-        console.log(res);
       })
       .catch((err) => {
-        console.log(err);
         toast.error(err.response.data.error);
       })
       .finally(() => setPending(false));

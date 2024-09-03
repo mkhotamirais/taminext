@@ -29,7 +29,9 @@ export default function ModalDelDialog({ item, open, setOpen }: ModalDelDialogPr
       .catch((err) => {
         toast.error(err.response.data.error);
       })
-      .finally(() => setOpen(false));
+      .finally(() => {
+        setPending(false);
+      });
   };
 
   return (

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import db from "@/lib/db";
 import Link from "next/link";
-import ProductActionBtn from "./product-action-btn";
+import ProductActionBtn from "./(components)/product-action-btn";
 
 export default async function V1Page() {
   const data = await db.product.findMany({ orderBy: { createdAt: "desc" } });
